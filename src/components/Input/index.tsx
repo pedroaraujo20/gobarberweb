@@ -38,6 +38,10 @@ const Input: React.FC<InputProps> = ({
   }, []);
 
   useEffect(() => {
+    setIsFilled(!!inputRef.current?.value);
+  }, []);
+
+  useEffect(() => {
     registerField({
       name: fieldName,
       ref: inputRef.current,
